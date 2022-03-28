@@ -1,0 +1,42 @@
+using System;
+
+namespace BubbleSort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { 39, 78, 56, 36, 24, 25, 15, 15, 89, 71 };
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i]+" ");
+            }
+            Console.WriteLine();
+
+            BubbleSort(arr);
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+        }
+
+        public static void BubbleSort(int[] arr)
+        {
+            int temp;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[i] < arr[j])
+                    {
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        }
+    }
+}
